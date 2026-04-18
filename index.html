@@ -2,8 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <title>G2M Capital</title>
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <script>
+    if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
+      location.replace('https:' + location.href.substring(location.protocol.length));
+    }
+  </script>
   <style>
     body {
       background-color: black;
